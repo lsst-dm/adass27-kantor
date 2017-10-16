@@ -77,9 +77,69 @@ Iain~Goodenow$^1$
 \paperauthor{Iain~Goodenow}{igoodenow@lsst.org}{}{LSST}{}{Tucson}{AZ}{85719}{USA}
 
 \begin{abstract}
-
+  The LSST Observatory in Chile is composed of two sites which together form the Summit - Base Complex. This complex is unique within LSST in that it houses all of the operational equipment and the real-time control resources of the LSST.
+  Because each LSST subsystem contributes substantial portions of the Summit and Base Facilities and Systems, it is important that the Summit - Base complex have an effective and tractable approach to Information Technology and Communications (ITC) management. This must be done in order to achieve a consistent, efficient, reliable design that fits within the sites' operational constraints (e.g space, safety, power, environmental), and to ensure IT security within the complex. A key aspect of the design is to determine the optimal locations (Site and Facility) for each ITC resource, where there are multiple options available.
+  There are also goals to maximize standardization of hardware and software across this complex, with the objective of simplifying the architecture, thereby simplifying the implementation of IT security and reducing development, commissioning, and operations maintenance and support costs.
+  An LSST System Engineering Summit - Base ITC Design ``Tiger Team,'' representing all LSST subsystems, the LSST commissioning scientist, the LSST Information Security Officer, and a Senior Manager in the Project Office was commissioned to define and integrate the ITC architecture and design of the complex, and to prepare the Summit - Base ITC Design document as the recommended baseline.
 \end{abstract}
 
+\section{Introduction}
+
+LSST is a widely distributed (Fig.~\ref{fig:sites}), complex project with a very large number of ITC hardware and software components and interfaces.
+
+%\articlefigure{filename}{labelname}{caption}
+\articlefigure{P5234_f1.eps}{fig:sites}{LSST Sites and Centers}
+
+\begin{itemize}
+
+\item LSST is composed of 4 Subsystems: Data Management, Camera, Telescope and Site, Education and Public Outreach.
+\item Each subsystem except EPO contributes substantial portions of the Summit and Base Facilities and Systems, including ITC.
+\item Each subsystem is headed by a lead institution and has multiple geographically distributed partner institutions and/or subcontractors.
+\item Each subsystem has a 5-level Work Breakdown Structure of deliverables, with inter-dependencies between elements.
+\item There are 22 unique Interface Control and Support Documents defining inter-subsystem interfaces.
+\item There are hundreds of subsystem and component-level design documents.
+\end{itemize}
+
+It is a significant challenge, requiring a cross-subsystem, cross-functional team, to develop an integrated ITC architecture and design encompassing all of the above.
+
+\section{Architecture and Standards}
+
+\paragraph{ITC architecture} Constraints and standards that are applied throughout the Complex were defined for: Information Security; ITC Infrastructure; Virtualization; and Software Change Control.
+
+\paragraph*{Information Security} Policies have been defined in the following areas: System and Network Access Control; Active Response; Central Log Collection and Analysis; Intrusion Detection Systems; Central Configuration Management; Anti-virus Software; Vulnerability Management; Unified Identity and Access Management; Hardware for Security Infrastructure.
+
+\paragraph*{ITC infrastructure} Standards have been defined for the following areas: Computer Room Infrastructure; Computing and Storage; Visualization; Databases.
+
+\paragraph*{Virtualization} LSST does not mandate use of virtualization. Rather it defines some guidelines in terms of technology when virtualization is used. When virtualization is being employed, it is on a service by service basis, and if utilized, VMWare is the environment of choice.
+
+\paragraph*{Software Upgrades and Change Control} While this topic is primarily the responsibility of the LSST Change Control process, a few ITC principles are recommended to provide an initial answer this question, in the areas of: routine, critical, and emergency releases; release management and deployment tools/environments, IT services coordination, test stands, backup and recovery/disaster recovery.
+
+\section{Logical Model}
+
+\articlefigure{P5234_f2.eps}{fig:telbbone}{Telescope Control Backbone}
+
+The Logical Model is a graphical and tabular model depicting and describing the functional ITC resources in the Summit-Base Complex, their significant common characteristics, and their communications.
+The Logical Model is depicted in a set of simplified box and line drawings in this document, and is more formally specified in the LSST SysML model.
+Backbone diagrams and tables have been defined for the following areas: Telescope Control (Fig.~\ref{fig:telbbone}), Camera Data and Control; Camera Support Rooms; Operations and Maintenance; Data Processing; and Auxiliary Telescope Control.
+
+Tables contain the definitions of the blocks on the backbone diagrams in terms of the servers/services they include, communications traffic in/out, and various security or design specific characteristics (e.g. special power needs).
+Note that some blocks appear on more than one backbone diagram as shown in the Backbones column.
+
+\section{Physical Model}
+
+The Physical Model documents the ITC Infrastructure design necessary to implement the Logical Model.
+This includes ITC servers, rack layout, network capacity, power, and cooling specifications for:
+
+\begin{itemize}
+\item Summit Computer Room.
+\item Telescope Annexes.
+\item Camera Utility Area.
+\item Auxiliary Telescope.
+\item Supervisory Control and Data Acquisition (SCADA) Enclave.
+\item Summit Network.
+\item Base Data Center.
+\item Summit - Base Network.
+\end{itemize}
 
 
 \acknowledgements We thank Tim Jenness for his help with the manuscript. This material is based upon work supported in part by the National Science Foundation through Cooperative Agreement 1258333 managed by the Association of Universities for Research in Astronomy (AURA), and the Department of Energy under Contract No. DE-AC02-76SF00515 with the SLAC National Accelerator Laboratory. Additional LSST funding comes from private donations, grants to universities, and in-kind support from LSSTC Institutional Members.
