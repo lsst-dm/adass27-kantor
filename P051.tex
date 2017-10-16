@@ -1,0 +1,89 @@
+% This is the ADASS_template.tex LaTeX file, 26th August 2016.
+% It is based on the ASP general author template file, but modified to reflect the specific
+% requirements of the ADASS proceedings.
+% Copyright 2014, Astronomical Society of the Pacific Conference Series
+% Revision:  14 August 2014
+
+% To compile, at the command line positioned at this folder, type:
+% latex ADASS_template
+% latex ADASS_template
+% dvipdfm ADASS_template
+% This will create a file called aspauthor.pdf.}
+
+\documentclass[11pt,twoside]{article}
+
+% Do NOT use ANY packages other than asp2014.
+\usepackage{asp2014}
+
+\aspSuppressVolSlug
+\resetcounters
+
+% References must all use BibTeX entries in a .bibfile.
+% References must be cited in the text using \citet{} or \citep{}.
+% Do not use \cite{}.
+% See ManuscriptInstructions.pdf for more details
+\bibliographystyle{asp2014}
+
+% The ``markboth'' line sets up the running heads for the paper.
+% 1 author: "Surname"
+% 2 authors: "Surname1 and Surname2"
+% 3 authors: "Surname1, Surname2, and Surname3"
+% >3 authors: "Surname1 et al."
+% Replace ``Short Title'' with the actual paper title, shortened if necessary.
+% Use mixed case type for the shortened title
+% Ensure shortened title does not cause an overfull hbox LaTeX error
+% See ASPmanual2010.pdf 2.1.4  and ManuscriptInstructions.pdf for more details
+\markboth{Kantor et al.}{LSST ITC Service Challenges}
+
+\begin{document}
+
+\title{Challenges of Standardizing and Supporting ITC Services in a Widely Distributed Project: ITC Design of the LSST Summit-Base Complex}
+
+% Note the position of the comma between the author name and the
+% affiliation number.
+% Author names should be separated by commas.
+% The final author should be preceded by "and".
+% Affiliations should not be repeated across multiple \affil commands. If several
+% authors share an affiliation this should be in a single \affil which can then
+% be referenced for several author names.
+% See ManuscriptInstructions.pdf and ASPmanual2010.pdf 3.1.4 for more details
+\author{Jeffrey~Kantor$^1$,
+Ron~Lambert$^1$,
+Mike~Huffer$^2$,
+Tony~Johnson$^2$,
+Kian-Tat~Lim$^2$,
+Gregory~Dubois-Felsmann$^3$,
+German~Schumacher$^1$,
+Alex~Withers$^4$,
+Paul~Domagala$^4$,
+Don~Petravick$^4$, and
+Iain~Goodenow$^1$
+\affil{$^1$Large Synoptic Survey Telescope, Tucson, AZ, USA; \email{jkantor@lsst.org}}
+\affil{$^2$SLAC National Laboratory, Menlo Park, CA, U.S.A.}
+\affil{$^3$IPAC, California Institute of Technology, Pasadena, CA, U.S.A.}
+\affil{$^4$NCSA, University of Illinois at Urbana-Champaign, Urbana, IL, U.S.A.}
+}
+
+% This section is for ADS Processing.  There must be one line per author.
+\paperauthor{Jeffrey~Kantor}{jkantor@lsst.org}{}{LSST}{}{Tucson}{AZ}{85719}{USA}
+\paperauthor{Mike~Huffer}{mehsys@slac.stanford.edu}{}{SLAC}{}{Menlo Park}{CA}{94025}{U.S.A.}
+\paperauthor{Tony~Johnson}{tonyj@stanford.edu}{}{SLAC}{}{Menlo Park}{CA}{94025}{U.S.A.}
+\paperauthor{K-T~Lim}{ktl@slac.stanford.edu}{}{SLAC}{}{Menlo Park}{CA}{94025}{U.S.A.}
+\paperauthor{Gregory~Dubois-Felsmann}{gpdf@ipac.caltech.edu}{}{California Institute of Technology}{IPAC}{Pasadena}{California}{91125}{USA}
+\paperauthor{German~Schumacher}{GSchumacher@lsst.org}{}{LSST}{}{Tucson}{AZ}{85719}{USA}
+\paperauthor{Alex~Withers}{alexw1@illinois.edu}{}{NCSA}{University of Illinois at Urbana-Champaign}{Urbana}{IL}{61801}{U.S.A.}
+\paperauthor{Donald~Petravick}{petravic@illinois.edu}{}{NCSA}{University of Illinois at Urbana-Champaign}{Urbana}{IL}{61801}{U.S.A.}
+\paperauthor{Paul~Domagala}{domagala@illinois.edu}{}{NCSA}{University of Illinois at Urbana-Champaign}{Urbana}{IL}{61801}{U.S.A.}
+\paperauthor{Iain~Goodenow}{igoodenow@lsst.org}{}{LSST}{}{Tucson}{AZ}{85719}{USA}
+
+\begin{abstract}
+
+\end{abstract}
+
+
+
+\acknowledgements We thank Tim Jenness for his help with the manuscript. This material is based upon work supported in part by the National Science Foundation through Cooperative Agreement 1258333 managed by the Association of Universities for Research in Astronomy (AURA), and the Department of Energy under Contract No. DE-AC02-76SF00515 with the SLAC National Accelerator Laboratory. Additional LSST funding comes from private donations, grants to universities, and in-kind support from LSSTC Institutional Members.
+
+\bibliography{P5234}  % For BibTex
+
+\end{document}
